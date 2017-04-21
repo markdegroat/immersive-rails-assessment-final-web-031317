@@ -4,7 +4,9 @@
   <% @appearances.each do |appearance| %>
     <li><%= "Episode #{appearance.episode.number} - #{appearance.episode.date.strftime("%B %d, %Y")}"%></li>
     <%= link_to appearance.guest.name, appearance.guest %>
+    <p>
     <%= "Rating: #{appearance.rating}" %></li>
-    <%= "Producer who booked it: #{appearance.user}" %></li>
+    <p>
+    <%= "Producer who booked it: #{appearance.user.username}" %></li>
   <% end %>
 </ul>

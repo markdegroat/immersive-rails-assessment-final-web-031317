@@ -7,9 +7,9 @@ class AppearancesController < ApplicationController
   def create
 
     @appearance = Appearance.new(appearance_params)
-    binding.pry
+    #binding.pry
     if @appearance.save
-      redirect_to apperances_path
+      redirect_to appearances_path
     else
       redirect_to new_appearance_path
     end
