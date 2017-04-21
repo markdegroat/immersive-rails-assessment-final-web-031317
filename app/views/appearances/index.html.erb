@@ -2,6 +2,7 @@
 
 <ul>
   <% @appearances.each do |appearance| %>
+    <%= link_to appearance.id, appearance %>
     <li><%= "Episode #{appearance.episode.number} - #{appearance.episode.date.strftime("%B %d, %Y")}"%></li>
     <%= link_to appearance.guest.name, appearance.guest %>
     <p>

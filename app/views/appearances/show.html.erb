@@ -1,0 +1,10 @@
+<h1>Appearance Show Page</h1>
+
+<li><%= "Episode #{@appearance.episode.number} - #{@appearance.episode.date.strftime("%B %d, %Y")}"%></li>
+<%= link_to @appearance.guest.name, @appearance.guest %>
+<p>
+<%= "Rating: #{@appearance.rating}" %></li>
+<p>
+<%= "Producer who booked it: #{@appearance.user.username}" %></li>
+
+<%= link_to "EDIT","#{@appearance.id}/edit" %>

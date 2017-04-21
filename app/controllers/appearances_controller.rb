@@ -23,11 +23,15 @@ class AppearancesController < ApplicationController
     #binding.pry
     @appearance = Appearance.find(params[:id])
     @appearance.update(appearance_params)
-    redirect_to appearances_path
+    redirect_to appearance_path(@appearance)
   end
 
   def index
     @appearances = Appearance.all
+  end
+
+  def show
+    @appearance = Appearance.find(params[:id])
   end
 
   private
